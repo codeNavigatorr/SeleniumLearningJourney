@@ -1,4 +1,4 @@
-package Odev;
+package cssSelectorOdevv;
 
 import Utility.BaseDriver;
 import Utility.Myfunction;
@@ -12,9 +12,9 @@ public class soru001 extends BaseDriver {
     @Test
     public void Test0() {
         driver.get("http://demoqa.com/text-box");
-        Myfunction.Bekle(15);
+        Myfunction.Bekle(10);
 
-        WebElement fullname = driver.findElement(By.cssSelector("input[type='text']"));
+        WebElement fullname = driver.findElement(By.xpath("//input[@class=' mr-sm-2 form-control']"));
         fullname.sendKeys("Automation");
         Myfunction.Bekle(2);
 
@@ -32,7 +32,9 @@ public class soru001 extends BaseDriver {
 
         WebElement submit = driver.findElement(By.cssSelector("button[id='submit']"));
         submit.click();
-        BekleKapat();
+
+        WebElement cotain=driver.findElement(By.xpath("//p[@class='mb-1' and @id='name']"));
+        Assert.assertTrue("yazibulunamai",cotain.equals("Automation"));
 
 
     }

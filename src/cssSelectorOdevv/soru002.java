@@ -1,4 +1,4 @@
-package Odev;
+package cssSelectorOdevv;
 
 import Utility.BaseDriver;
 import Utility.Myfunction;
@@ -23,8 +23,12 @@ public class soru002 extends BaseDriver {
         Myfunction.Bekle(3);
 
         WebElement sing=driver.findElement(By.cssSelector("a[class='btn btn-primary']"));
-
         sing.click();
+
+        WebElement header=driver.findElement(By.xpath("//h6[@style='text-align: center;font-size: x-large;color:red']"));
+
+        System.out.println(header.getText());
+
         BekleKapat();
 
 
