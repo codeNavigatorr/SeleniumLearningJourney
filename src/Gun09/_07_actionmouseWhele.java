@@ -22,8 +22,20 @@ public class _07_actionmouseWhele extends BaseDriver {
                 .perform();
         BekleKapat();
 
-
-
-
     }
-}
+@Test
+public void Test2() {
+
+    driver.get("https://www.selenium.dev/selenium/web/scrolling_tests/frame_with_nested_scrolling_frame_out_of_view.html");
+    Myfunction.Bekle(3);
+
+
+    new Actions(driver)
+            .scrollByAmount(0, 700)
+            .build()
+            .perform();
+    BekleKapat();
+
+
+}}
+
